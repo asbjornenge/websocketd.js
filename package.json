@@ -7,5 +7,8 @@
     "test": "mocha"
   },
   "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "ws": "~0.4.31"
+  }
 }
