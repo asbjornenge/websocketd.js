@@ -9,6 +9,7 @@
   "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "ws": "~0.4.31"
+    "ws": "~0.4.31",
+    "websocket": "~1.0.8"
   }
 }
