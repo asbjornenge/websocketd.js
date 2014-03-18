@@ -139,4 +139,4 @@ var WebsocketServer = net.createServer(function (socket) {
 
 });
 
-WebsocketServer.listen(8080, "127.0.0.1");
+WebsocketServer.listen(8080, "0.0.0.0");
