@@ -10,6 +10,7 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "ws": "~0.4.31",
-    "websocket": "~1.0.8"
+    "websocket": "~1.0.8",
+    "nodejs-websocket": "~0.1.4"
   }
 }
