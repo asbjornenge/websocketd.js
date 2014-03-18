@@ -1,0 +1,11 @@
+{
+  "name": "websocketd.js",
+  "version": "0.0.1",
+  "description": "Turn any application that uses STDIN/STDOUT into a WebSocket server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
+  "license": "BSD-2-Clause"
+}
