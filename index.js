@@ -14,7 +14,7 @@ var default_config = {
     host : '0.0.0.0'
 }
 
-if (argv._[0] === 'node') argv._.shift() // Binary parameter protection (bug in nexe)
+if (argv._[0] === 'meh') argv._.shift() // Binary parameter protection (bug in nexe)
 var config    = _.merge(_.clone(default_config, true), argv)
 var proc      = _.reduce(process.argv, function(was, key) {
     if (key === config._[0]) this.cmd = true
