@@ -31,6 +31,7 @@ var server = ws.createServer(function (conn) {
         conn.sendText(data)
     });
     conn.proc.on('error', function(err) {
+        console.log("ERROR: "+err)
         conn.proc = null
     })
 
@@ -41,10 +42,12 @@ var server = ws.createServer(function (conn) {
     })
     conn.on("close", function (code, reason) {
         console.log("Connection closed")
+        if (!conn.proc) return
         conn.proc.kill('SIGHUP')
     })
     conn.on("error", function(err) {
         console.log("Error",err)
+        if (!conn.proc) return
         conn.proc.kill('SIGHUP')
     })
 }).listen(config.port, config.host, function() {
