@@ -19,4 +19,8 @@ It works very similar to websocketd. For each new established connection it will
 	ws.send('boofar\n')
 	// --> boofar	
 
+## Build (binary)
+
+I use [nexe](https://github.com/crcn/nexe) to build a single *./websocketdjs* executable. The process is a bit flakey atm, so won't bother documenting it. Open an issue if you want to do this and are having problems.
+
 enjoy.
