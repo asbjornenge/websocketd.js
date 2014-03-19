@@ -1,6 +1,6 @@
 # Websocketd.js
 
-Shameless theft of the [websocketd](https://github.com/joewalnes/websocketd) idea, written in javascript.
+Shameless theft of [websocketd](https://github.com/joewalnes/websocketd), written in javascript.
 
 Why? I needed some looser security. Didn't want to wait. Didn't want to write any Go. And it's like 50 lines of code... Prolly don't handle most edges :-P Please PR.
 
