@@ -14,6 +14,7 @@ var default_config = {
     host : '0.0.0.0'
 }
 
+if (argv[0] === 'node') argv.shift()
 var config    = _.merge(_.clone(default_config, true), argv)
 var proc      = _.reduce(process.argv, function(was, key) {
     if (key === config._[0]) this.cmd = true
