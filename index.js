@@ -14,7 +14,7 @@ var default_config = {
     host : '0.0.0.0'
 }
 
-if (argv[0] === 'node') argv.shift()
+if (argv._[0] === 'node') argv._.shift()
 console.log(argv)
 var config    = _.merge(_.clone(default_config, true), argv)
 console.log(config)
