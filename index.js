@@ -15,17 +15,17 @@ var default_config = {
 }
 
 if (argv[0] === 'node') argv.shift()
+console.log(argv)
 var config    = _.merge(_.clone(default_config, true), argv)
+console.log(config)
 var proc      = _.reduce(process.argv, function(was, key) {
     if (key === config._[0]) this.cmd = true
     return this.cmd ? was.concat(key) : was
 },[])
+console.log(proc)
 
 var server = ws.createServer(function (conn) {
     console.log("New connection")
-
-    console.log(proc[0],proc.slice(1))
-
     conn.proc = spawn(proc[0],proc.slice(1))
     conn.proc.stdout.on('data', function (data) {
         conn.sendText(data)
@@ -37,7 +37,6 @@ var server = ws.createServer(function (conn) {
         console.log("ERROR: "+err)
         conn.proc = null
     })
-
     conn.on("text", function(data) {
         if (!conn.proc) return
         try { conn.proc.stdin.write(data) }
