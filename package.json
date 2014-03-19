@@ -9,6 +9,8 @@
   "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "nodejs-websocket": "~0.1.4"
+    "nodejs-websocket": "~0.1.4",
+    "optimist": "~0.6.1",
+    "lodash": "~2.4.1"
   }
 }
