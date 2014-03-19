@@ -23,6 +23,8 @@ var proc      = _.reduce(process.argv, function(was, key) {
 var server = ws.createServer(function (conn) {
     console.log("New connection")
 
+    console.log(proc[0],proc.slice(1))
+
     conn.proc = spawn(proc[0],proc.slice(1))
     conn.proc.stdout.on('data', function (data) {
         conn.sendText(data)
