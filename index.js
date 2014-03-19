@@ -14,15 +14,12 @@ var default_config = {
     host : '0.0.0.0'
 }
 
-if (argv._[0] === 'node') argv._.shift()
-console.log(argv)
+if (argv._[0] === 'node') argv._.shift() // Binary parameter protection (bug in nexe)
 var config    = _.merge(_.clone(default_config, true), argv)
-console.log(config)
 var proc      = _.reduce(process.argv, function(was, key) {
     if (key === config._[0]) this.cmd = true
     return this.cmd ? was.concat(key) : was
 },[])
-console.log(proc)
 
 var server = ws.createServer(function (conn) {
     console.log("New connection")
