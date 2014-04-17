@@ -1,9 +1,21 @@
 {
   "name": "websocketdjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Turn any application that uses STDIN/STDOUT into a WebSocket server.",
   "bin": {
     "websocketdjs" : "index.js"
+  },
+  "keywords": [
+    "cli",
+    "websocket",
+    "bin",
+    "app"
+  ],
+  "homepage": "https://github.com/asbjornenge/websocketd.js",
+  "bugs": "https://github.com/asbjornenge/websocketd.js/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asbjornenge/websocketd.js.git"
   },
   "scripts": {
     "test": "mocha"
