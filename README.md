@@ -8,19 +8,18 @@ Why? I needed some looser security. Didn't want to wait. Didn't want to write an
 
 It works very similar to websocketd. For each new established connection it will spawn a child of the supplied process. Any **stdout** and **stderr** from that child will be sendt to the connecting client. And any data sendt from the client will be piped to **stdin** of the child process.
 
+## Install
+
+    npm install -g websocketdjs
+
 ## Run
 
-	node index.js --port 8080 ./echo.sh
+	websocketdjs --port 8080 tail -f /var/log/nginx/access.log
 
 ## Connect
 
 	var ws = new WebSocket('ws://localhost:8080/')
 	ws.onmessage = function(event) { console.log(event.data); }
-	ws.send('boofar\n')
-	// --> boofar	
-
-## Build (binary)
-
-I use [nexe](https://github.com/crcn/nexe) to build a single *./websocketdjs* executable. The process is a bit flakey atm, so won't bother documenting it. Open an issue if you want to do this and are having problems.
+	// --> nginx logs
 
 enjoy.

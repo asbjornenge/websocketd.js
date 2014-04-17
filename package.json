@@ -1,14 +1,16 @@
 {
-  "name": "websocketd.js",
+  "name": "websocketdjs",
   "version": "0.0.1",
   "description": "Turn any application that uses STDIN/STDOUT into a WebSocket server.",
-  "main": "index.js",
+  "bin": {
+    "websocketdjs" : "index.js"
+  },
   "scripts": {
     "test": "mocha"
   },
   "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
   "license": "BSD-2-Clause",
-  "devDependencies": {
+  "dependencies" : {
     "nodejs-websocket": "~0.1.4",
     "optimist": "~0.6.1",
     "lodash": "~2.4.1"

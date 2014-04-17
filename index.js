@@ -1,13 +1,10 @@
-/** websocketd.js
- *
- * STDOUT into a websocket server
- *
- */
-
+#!/usr/bin/env node
 var _     = require('lodash')
 var ws    = require('nodejs-websocket')
 var argv  = require('optimist').argv
 var spawn = require('child_process').spawn
+
+if (argv.help || argv.h) { console.log('Usage\n   $ websocketdjs --port 8080 <stdin/stdout application>'); return }
 
 var default_config = {
     port : null,
